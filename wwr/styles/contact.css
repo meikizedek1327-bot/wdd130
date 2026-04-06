@@ -1,7 +1,16 @@
 :root {
     --primary-color: #1e5a96;
+    --primary-darker: #005a87;
     --accent1-color: #f4a460;
     --accent2-color: #2d7a5c;
+    --text-color: #333;
+    --text-secondary: #666;
+    --bg-light: #f9f9f9;
+    --bg-lighter: #f0f8ff;
+    --bg-neutral: #f0f0f0;
+    --bg-white: #fff;
+    --border-color: #ddd;
+    --border-light: #ccc;
     --body-font: 'Arial', sans-serif;
     --heading-font: 'Georgia', serif;
 }
@@ -13,9 +22,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: var(--body-font);
     line-height: 1.6;
-    color: #333;
+    color: var(--text-color);
 }
 
 /* Header and Navigation */
@@ -25,8 +34,8 @@ header {
     align-items: center;
     gap: 2rem;
     padding: 1rem 2rem;
-    background-color: #f0f0f0;
-    border-bottom: 3px solid steelblue;
+    background-color: var(--bg-neutral);
+    border-bottom: 3px solid var(--primary-color);
 }
 
 header img {
@@ -43,14 +52,14 @@ nav {
 nav a {
     padding: 0.5rem 1rem;
     text-decoration: none;
-    color: steelblue;
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 1rem;
     transition: color 0.3s;
 }
 
 nav a:hover {
-    color: #005a87;
+    color: var(--primary-darker);
 }
 
 /* Main Content */
@@ -69,7 +78,7 @@ main {
 .hero img {
     width: 100%;
     height: auto;
-    border: 3px solid steelblue;
+    border: 3px solid var(--primary-color);
 }
 
 .hero h1 {
@@ -80,7 +89,7 @@ main {
     background-color: rgba(255, 255, 255, 0.9);
     padding: 1rem 2rem;
     font-size: 2.5rem;
-    color: steelblue;
+    color: var(--primary-color);
     text-align: center;
 }
 
@@ -89,15 +98,15 @@ main {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
     margin-top: 1.5rem;
-    background-color: #f9f9f9;
+    background-color: var(--bg-light);
     padding: 1.5rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
 }
 
 .hero article img {
     width: 100%;
     height: auto;
-    border: 2px solid steelblue;
+    border: 2px solid var(--primary-color);
 }
 
 .hero article p {
@@ -112,13 +121,13 @@ main {
     align-items: center;
     margin: 2rem 0;
     padding: 2rem;
-    background-color: #f0f8ff;
-    border: 2px solid steelblue;
+    background-color: var(--bg-lighter);
+    border: 2px solid var(--primary-color);
 }
 
 .history h2 {
     grid-column: 1 / -1;
-    color: steelblue;
+    color: var(--primary-color);
     font-size: 2rem;
     text-align: center;
     margin-bottom: 1rem;
@@ -138,7 +147,7 @@ main {
 .history img {
     width: 100%;
     height: auto;
-    border: 2px solid steelblue;
+    border: 2px solid var(--primary-color);
     grid-column: 2;
     grid-row: 2;
 }
@@ -152,13 +161,13 @@ main {
 .adventures {
     margin: 2rem 0;
     padding: 2rem;
-    background-color: #f9f9f9;
-    border: 2px solid steelblue;
+    background-color: var(--bg-light);
+    border: 2px solid var(--primary-color);
 }
 
 .adventures h2 {
     text-align: center;
-    color: steelblue;
+    color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 2rem;
 }
@@ -177,13 +186,13 @@ figure img {
     width: 100%;
     height: 150px;
     object-fit: cover;
-    border: 2px solid steelblue;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
 }
 
 figcaption {
     margin-top: 0.5rem;
-    color: steelblue;
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 0.9rem;
 }
@@ -192,13 +201,13 @@ figcaption {
 .contact-info {
     margin: 2rem 0;
     padding: 2rem;
-    background-color: #f0f8ff;
-    border: 2px solid steelblue;
+    background-color: var(--bg-lighter);
+    border: 2px solid var(--primary-color);
 }
 
 .contact-info h2 {
     text-align: center;
-    color: steelblue;
+    color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 2rem;
 }
@@ -212,13 +221,13 @@ figcaption {
 
 .company-info {
     padding: 1.5rem;
-    background-color: #fff;
-    border: 1px solid #ddd;
+    background-color: var(--bg-white);
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 }
 
 .company-info h3 {
-    color: steelblue;
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-size: 1.3rem;
 }
@@ -246,13 +255,13 @@ figcaption {
 .employees {
     margin: 2rem 0;
     padding: 2rem;
-    background-color: #f9f9f9;
-    border: 2px solid steelblue;
+    background-color: var(--bg-light);
+    border: 2px solid var(--primary-color);
 }
 
 .employees h2 {
     text-align: center;
-    color: steelblue;
+    color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 2rem;
 }
@@ -265,9 +274,9 @@ figcaption {
 }
 
 .employees-grid figure {
-    background-color: #fff;
+    background-color: var(--bg-white);
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 }
 
@@ -275,13 +284,13 @@ figcaption {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border: 2px solid steelblue;
+    border: 2px solid var(--primary-color);
     border-radius: 5px;
 }
 
 .employees-grid figcaption {
     margin-top: 1rem;
-    color: steelblue;
+    color: var(--primary-color);
     font-weight: bold;
     font-size: 1rem;
 }
@@ -290,7 +299,7 @@ figcaption {
     display: block;
     font-size: 0.85rem;
     font-weight: normal;
-    color: #666;
+    color: var(--text-secondary);
     margin-top: 0.5rem;
 }
 
@@ -298,13 +307,13 @@ figcaption {
 .contact-form-section {
     margin: 2rem 0;
     padding: 2rem;
-    background-color: #f0f8ff;
-    border: 2px solid steelblue;
+    background-color: var(--bg-lighter);
+    border: 2px solid var(--primary-color);
 }
 
 .contact-form-section h2 {
     text-align: center;
-    color: steelblue;
+    color: var(--primary-color);
     font-size: 2rem;
     margin-bottom: 2rem;
 }
@@ -312,24 +321,24 @@ figcaption {
 .contact-form {
     max-width: 600px;
     margin: 0 auto;
-    background-color: #fff;
+    background-color: var(--bg-white);
     padding: 2rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
 }
 
 fieldset {
     margin-bottom: 1.5rem;
     padding: 1rem;
-    border: 1px solid #ddd;
+    border: 1px solid var(--border-color);
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: var(--bg-light);
 }
 
 legend {
     padding: 0 0.5rem;
     font-weight: bold;
-    color: steelblue;
+    color: var(--primary-color);
 }
 
 .form-group {
@@ -339,7 +348,7 @@ legend {
 .form-group label {
     display: block;
     margin-bottom: 0.5rem;
-    color: #333;
+    color: var(--text-color);
     font-weight: bold;
 }
 
@@ -348,10 +357,10 @@ legend {
 .form-group textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--border-light);
     border-radius: 4px;
     font-size: 1rem;
-    font-family: Arial, sans-serif;
+    font-family: var(--body-font);
     box-sizing: border-box;
 }
 
@@ -359,8 +368,8 @@ legend {
 .form-group input[type="email"]:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: steelblue;
-    box-shadow: 0 0 5px rgba(70, 130, 180, 0.3);
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(30, 90, 150, 0.3);
 }
 
 .form-group textarea {
@@ -386,8 +395,8 @@ legend {
 .submit-btn {
     width: 100%;
     padding: 0.75rem 1.5rem;
-    background-color: steelblue;
-    color: white;
+    background-color: var(--primary-color);
+    color: var(--bg-white);
     border: none;
     border-radius: 4px;
     font-size: 1.1rem;
@@ -397,7 +406,7 @@ legend {
 }
 
 .submit-btn:hover {
-    background-color: #005a87;
+    background-color: var(--primary-darker);
 }
 
 .submit-btn:active {
@@ -409,9 +418,9 @@ footer {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f0f0f0;
+    background-color: var(--bg-neutral);
     padding: 1.5rem 2rem;
-    border-top: 3px solid steelblue;
+    border-top: 3px solid var(--primary-color);
     margin-top: 2rem;
 }
 
